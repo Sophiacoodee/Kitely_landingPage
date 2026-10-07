@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kitely — More than money, it's real well-being</title>
+<meta name="description" content="Kitely turns remittances into tranquility and security. Choose a category, send, and your family picks up what they need at partner stores.">
+<meta name="theme-color" content="#021536">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#021536;
+  --navy-2:#06214F;
+  --green:#6DB31E;
+  --green-bright:#82C409;
+  --white:#fff;
+  --paper:#F3F6FA;
+  --ink:#0B1A35;
+  --muted:#5A6B88;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--navy)}
+body{font-family:'Manrope',system-ui,sans-serif;color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom,0)}
+h1,h2,h3,.num{font-family:'Outfit',sans-serif;letter-spacing:-.025em;line-height:1.02}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+:focus-visible{outline:3px solid var(--green-bright);outline-offset:3px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(2,21,54,.92);backdrop-filter:blur(12px);padding-top:env(safe-area-inset-top,0)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+nav img{height:42px;width:auto;display:block}
+.links{display:flex;gap:24px;align-items:center;color:#C9D3E6;font-weight:500;font-size:.95rem}
+.links a{text-decoration:none}.links a:hover{color:#fff}
+.links .cta{background:var(--green);color:var(--navy);font-weight:700;padding:11px 22px;border-radius:10px}
+.links .cta:hover{background:var(--green-bright);color:var(--navy)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:14px;background:var(--green);color:var(--navy);font-family:'Outfit';font-weight:600;font-size:1.15rem;text-decoration:none;padding:18px 30px;border-radius:12px;transition:background .2s,transform .2s}
+.btn:hover{background:var(--green-bright);transform:translateY(-2px)}
+.btn svg{width:22px;height:22px}
+
+/* hero */
+.hero{background:var(--navy);color:#fff;padding:84px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(3rem,6.4vw,5.6rem);font-weight:700}
+.hero h1 span{display:block;color:var(--green)}
+.hero p{font-size:1.2rem;color:#B8C5DD;max-width:470px;margin:28px 0 38px}
+.hero .sub{margin-left:22px;color:#fff;font-weight:600;text-decoration:none;border-bottom:2px solid var(--green)}
+
+/* video container with slightly rounded corners */
+.video-container{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  align-items:center;
+}
+.video-crop{
+  width:220px;
+  height:440px;
+  border-radius:12px;
+  overflow:hidden;
+  border:2px solid #1B3E80;
+  box-shadow:0 12px 30px rgba(0,0,0,.4);
+  background:#000;
+}
+.video-crop video{
+  width:100%;
+  height:120%;
+  margin-top:-10%;
+  object-fit:cover;
+  display:block;
+}
+
+/* stats */
+.stats{background:#fff;padding:64px 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.stats div{padding:0 32px;border-left:3px solid var(--green)}
+.stats .num{display:block;font-size:3.4rem;font-weight:700;color:var(--navy)}
+.stats span:last-child{color:var(--muted);font-size:.98rem;display:block;max-width:260px}
+
+section{padding:110px 0}
+h2{font-size:clamp(2.2rem,4.4vw,3.5rem);font-weight:700;color:var(--navy);margin-bottom:22px}
+.lead{max-width:560px;font-size:1.15rem;color:var(--muted)}
+
+/* story */
+.story{background:var(--paper)}
+.story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.story q{display:block;font-family:'Outfit';font-size:2rem;line-height:1.2;font-weight:500;color:var(--navy);quotes:none;border-left:5px solid var(--green);padding-left:32px}
+
+/* steps */
+.steps{background:var(--navy);color:#fff}
+.steps h2{color:#fff}.steps .lead{color:#B8C5DD}
+.steps ol{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:64px}
+.steps li{border-top:1px solid #2A4478;padding-top:28px}
+.steps .num{font-size:4.2rem;font-weight:600;color:var(--green);display:block;margin-bottom:14px}
+.steps h3{font-size:1.6rem;margin-bottom:10px;font-weight:600}
+.steps p{color:#B8C5DD}
+
+/* download */
+.download{background:var(--green);padding:100px 0;position:relative;overflow:hidden}
+.download .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+.download h2{color:var(--navy);font-size:clamp(2.6rem,5.6vw,4.6rem)}
+.download p{color:#0E2A12;font-size:1.2rem;max-width:480px;margin-bottom:38px;font-weight:500}
+.download .btn{background:var(--navy);color:#fff;font-size:1.45rem;padding:26px 46px;border-radius:14px}
+.download .btn:hover{background:#000d24}
+.download .btn svg{width:28px;height:28px;color:var(--green-bright)}
+.download small{display:block;margin-top:18px;color:#12301A;font-weight:600}
+.tile{background:var(--navy);border-radius:28px;padding:48px;display:grid;place-items:center;aspect-ratio:4/5;max-width:340px;margin-left:auto;transform:rotate(2.5deg)}
+.tile img{width:70%;height:auto}
+
+/* footer & contacts */
+footer{background:var(--navy);color:#9FB0CE;padding:50px 0;font-size:.92rem;border-top:1px solid #1B3E80}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+footer img{height:32px}
+.footer-contacts{display:flex;gap:20px;align-items:center}
+.footer-contacts a{color:#C9D3E6;text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-weight:500;transition:color .2s}
+.footer-contacts a:hover{color:var(--green-bright)}
+.footer-contacts svg{width:18px;height:18px;fill:currentColor}
+
+@media(max-width:860px){
+  .hero .wrap,.story .wrap,.download .wrap{grid-template-columns:1fr;gap:48px}
+  .steps ol,.stats .wrap{grid-template-columns:1fr;gap:36px}
+  .links a:not(.cta){display:none}
+  section{padding:72px 0}.hero{padding:48px 0 30px}.download{padding:72px 0}
+  .tile{margin:0 auto;max-width:260px}
+  .stats div{padding:0 0 0 24px}
+  .download .btn{width:100%;justify-content:center;padding:24px 20px}
+  .video-container{flex-direction:column;align-items:center}
+  footer .wrap{flex-direction:column;align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" aria-label="Kitely home"><img src="logo.png" alt="Kitely"></a>
+    <div class="links">
+      <a href="#how">How it works</a>
+      <a href="https://www.instagram.com/kitely_2026?stkn=MmVrMzZnYTB1eHNv" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:kitelyremittances@gmail.com">Contact</a>
+      <a href="#download" class="cta">Download the app</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1>More than money,<span>it's real well-being.</span></h1>
+      <p>Kitely turns remittances into tranquility and security. Choose direct categories like health, education, or food to ensure your support fulfills its true purpose.</p>
+      <a class="btn" href="#download">Download the app</a>
+      <a class="sub" href="#how">See how it works</a>
+    </div>
+    <div class="video-container">
+      <div class="video-crop">
+        <video id="video1" autoplay muted playsinline>
+          <source src="video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-crop">
+        <video id="video2" muted playsinline>
+          <source src="video2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <svg class="string" viewBox="0 0 1100 60" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M0 40 C 200 5, 380 55, 560 30 S 900 10, 1100 34" stroke="#fff" stroke-opacity=".35" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap">
+    <div><span class="num">100%</span><span>Guaranteed destination for essential needs like food, health, and education</span></div>
+    <div><span class="num">Direct</span><span>Redemption at verified partner businesses and essential stores</span></div>
+    <div><span class="num">Real-time</span><span>Verification and tracking for complete peace of mind</span></div>
+  </div>
+</div>
+
+<section class="story">
+  <div class="wrap">
+    <div>
+      <h2>Behind every effort, a purpose.</h2>
+      <p class="lead">Often, financial support sent from abroad gets dispersed among unplanned expenses. Kitely bridges the gap between intention and reality, allowing every contribution to meet its exact goal.</p>
+    </div>
+    <q>People who work hard to support their families deserve to know their effort turns into genuine well-being.</q>
+  </div>
+</section>
+
+<section class="steps" id="how">
+  <div class="wrap">
+    <h2>Three simple steps.</h2>
+    <p class="lead">A process designed to make sure help arrives exactly where it matters.</p>
+    <ol>
+      <li><span class="num">1</span><h3>Choose and send</h3><p>The sender picks a category, like food, health or education, and an amount.</p></li>
+      <li><span class="num">2</span><h3>Scan at a partner store</h3><p>The receiver visits a business partner and scans a QR code.</p></li>
+      <li><span class="num">3</span><h3>Verify and pick up</h3><p>The transaction is verified and the receiver picks up the products.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="download" id="download">
+  <div class="wrap">
+    <div>
+      <h2>Send help that arrives where it matters.</h2>
+      <p>Made for people who manage their resources from their phone and want their effort to show in their family's quality of life.</p>
+      <a class="btn" href="https://expo.dev/artifacts/eas/AhzgranarvDrGBri4KJ1KTAM1dE66KQt75MjXwpfXuo.apk" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
+        Download the app
+      </a>
+      <small>Free · Android (APK)</small>
+    </div>
+    <div class="tile" aria-hidden="true"><img src="icon.png" alt=""></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="logo.png" alt="Kitely">
+    <div class="footer-contacts">
+      <a href="https://www.instagram.com/kitely_2026?stkn=MmVrMzZnYTB1eHNv" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        @kitely_2026
+      </a>
+      <a href="mailto:kitelyremittances@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        kitelyremittances@gmail.com
+      </a>
+    </div>
+    <span>© 2026 Kitely · More than money, it's real well-being.</span>
+  </div>
+</footer>
+
+<script>
+  const video1 = document.getElementById('video1');
+  const video2 = document.getElementById('video2');
+
+  video1.addEventListener('ended', () => {
+    video2.play();
+  });
+</script>
+
+</body>
+</html>
